@@ -13,10 +13,10 @@ if not HOSTNAMES:
 
 HOSTNAMES = HOSTNAMES.split(",")
 
-TIMEOUT = getenv("TIMEOUT", 2) # How long to wait for a response from the hostnames
+TIMEOUT = int(getenv("TIMEOUT", 2)) # How long to wait for a response from the hostnames
 
-SLEEP_TIME = getenv("SLEEP_TIME", 1.2) # How often to check the network status
-SLEEP_TIME_DISCONNECTED = getenv("SLEEP_TIME_DISCONNECTED", 0.5) # How often to check the network status when disconnected
+SLEEP_TIME = int(getenv("SLEEP_TIME", 1.2)) # How often to check the network status
+SLEEP_TIME_DISCONNECTED = int(getenv("SLEEP_TIME_DISCONNECTED", 0.5)) # How often to check the network status when disconnected
 
 def wait_for_network():
     new_ip = network.get_ip(timeout=SLEEP_TIME_DISCONNECTED)
