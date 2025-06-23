@@ -30,7 +30,7 @@ Make sure to change `HOSTNAMES` and `volumes`. For example
 
 Run `sudo docker compose up`. ([running as sudo is necessary](https://github.com/alessandromaggio/pythonping/issues/27))
 
-Until we provide an amd64 image, you can use the Dockerfile in the repo to build the image on your own.
+Until we provide an amd64 image, you can use the [Dockerfile](https://github.com/SleepySpeller/ConstantLine/blob/main/Dockerfile) in the repo to build the image on your own.
 
 # Reading logs
 The output of consant line is in form of [JSONLine](https://jsonlines.org/), where each new line is a seperate JSON object.\
