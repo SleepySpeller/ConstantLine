@@ -27,7 +27,7 @@ def wait_for_network():
     return new_ip
 
 network = Network(HOSTNAMES, TIMEOUT)
-logs = Logs()
+logs = Logs("/logs")
 
 print("Getting the current IP")
 current_ip = network.get_ip()

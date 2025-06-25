@@ -13,6 +13,7 @@ class Logs:
 
     def log(self, message: dict):
         self.file.write(json.dumps(message) + "\n")
+        self.file.flush()
         
     def log_reconnect(self, ip: str):
         return self.log({
